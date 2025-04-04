@@ -1,0 +1,96 @@
+{
+  "name": "Request Requirements Alignment",
+  "description": "Rules to ensure API endpoints and request handlers align with formal requirements documentation",
+  "rules": [
+    {
+      "id": "api-endpoint-alignment",
+      "name": "API Endpoint Alignment",
+      "description": "API endpoints must align with specifications in requirements documents",
+      "guidelines": [
+        "Each API endpoint must reference its requirement specification",
+        "URL paths must match those defined in requirements",
+        "HTTP methods must comply with requirement specifications",
+        "Query parameters must match requirements documentation",
+        "Endpoint behavior must implement specified requirements"
+      ],
+      "severity": "error",
+      "configuration": {
+        "endpointTagPattern": "@api-requirement\\s+[\\w\\.-]+",
+        "validateURLPath": true,
+        "validateHTTPMethod": true
+      }
+    },
+    {
+      "id": "request-validation-alignment",
+      "name": "Request Validation Alignment",
+      "description": "Request validation must enforce requirements specifications",
+      "guidelines": [
+        "Validate all required fields specified in requirements",
+        "Implement all validation rules from requirements",
+        "Enforce data types specified in requirements",
+        "Apply request size limits as defined in requirements",
+        "Implement rate limiting according to requirements"
+      ],
+      "severity": "error",
+      "configuration": {
+        "requireValidationReference": true,
+        "enforceRequiredFields": true,
+        "enforceDataTypes": true
+      }
+    },
+    {
+      "id": "request-schema-conformance",
+      "name": "Request Schema Conformance",
+      "description": "Request and response structures must conform to schemas defined in requirements",
+      "guidelines": [
+        "Request bodies must match schemas defined in requirements",
+        "Response structures must match documented formats",
+        "All request/response fields must be documented in requirements",
+        "Object properties must align with requirement specifications",
+        "Serialization formats must follow requirements"
+      ],
+      "severity": "error",
+      "configuration": {
+        "enforceRequestSchema": true,
+        "enforceResponseSchema": true,
+        "validateAgainstRequirements": true
+      }
+    },
+    {
+      "id": "error-handling-requirements",
+      "name": "Error Handling Requirements",
+      "description": "Error handling for requests must follow requirements",
+      "guidelines": [
+        "Implement all error scenarios specified in requirements",
+        "Return error codes defined in requirements documentation",
+        "Provide error messages as specified in requirements",
+        "Follow error response format from requirements",
+        "Log errors according to requirements specifications"
+      ],
+      "severity": "warning",
+      "configuration": {
+        "enforceErrorCodes": true,
+        "validateErrorFormat": true,
+        "requireErrorReference": true
+      }
+    },
+    {
+      "id": "requirements-based-http-client",
+      "name": "Requirements-Based HTTP Client",
+      "description": "HTTP client implementations must align with API requirements",
+      "guidelines": [
+        "Client request methods must match API endpoint requirements",
+        "Client code must handle all response types in requirements",
+        "Authentication methods must follow API requirements",
+        "Timeout settings must reflect requirements specifications",
+        "Retry logic must align with requirements"
+      ],
+      "severity": "warning",
+      "configuration": {
+        "validateClientRequests": true,
+        "enforceAuthMethods": true,
+        "requireTimeoutSettings": true
+      }
+    }
+  ]
+} 

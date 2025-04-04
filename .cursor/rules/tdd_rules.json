@@ -1,0 +1,75 @@
+{
+  "name": "Test-Driven Development",
+  "description": "Rules for implementing Test-Driven Development (TDD) practices",
+  "rules": [
+    {
+      "id": "tests-first",
+      "name": "Tests First Approach",
+      "description": "Write test cases before implementing functionality",
+      "guidelines": [
+        "Create test files before implementation files",
+        "Define expected behavior in test cases before writing code",
+        "Include both positive and negative test cases",
+        "Cover edge cases in initial test suite",
+        "Commit test files before implementation code"
+      ],
+      "severity": "error",
+      "configuration": {
+        "requireTestFirst": true,
+        "testFilePattern": "**/*.test.{js,ts,py}"
+      }
+    },
+    {
+      "id": "red-green-refactor",
+      "name": "Red-Green-Refactor Cycle",
+      "description": "Follow the TDD cycle of red (failing test), green (passing test), refactor",
+      "guidelines": [
+        "Start with a failing test that defines expected behavior",
+        "Write minimal code to make tests pass",
+        "Refactor code while maintaining passing tests",
+        "Run tests after each significant change",
+        "Maintain test suite as a living documentation of requirements"
+      ],
+      "severity": "warning",
+      "configuration": {
+        "requireFailingTestFirst": true,
+        "runTestsOnChange": true
+      }
+    },
+    {
+      "id": "code-coverage-enforcement",
+      "name": "Code Coverage Enforcement",
+      "description": "Enforce minimum test coverage for all new code",
+      "guidelines": [
+        "New code requires minimum 90% test coverage",
+        "No implementation code should exist without corresponding tests",
+        "Core business logic requires 100% test coverage",
+        "Edge cases must be explicitly tested",
+        "All code paths must have test coverage"
+      ],
+      "severity": "error",
+      "configuration": {
+        "newCodeCoverage": 90,
+        "coreFunctionCoverage": 100,
+        "enforceOnCommit": true
+      }
+    },
+    {
+      "id": "test-isolation",
+      "name": "Test Isolation",
+      "description": "Ensure tests are isolated and do not depend on each other",
+      "guidelines": [
+        "Each test should be independent and self-contained",
+        "Use setup and teardown methods to reset state",
+        "Mock external dependencies for consistent test environment",
+        "Avoid test order dependencies",
+        "Tests should run in any order and still pass"
+      ],
+      "severity": "warning",
+      "configuration": {
+        "detectSharedState": true,
+        "enforceIndependence": true
+      }
+    }
+  ]
+} 

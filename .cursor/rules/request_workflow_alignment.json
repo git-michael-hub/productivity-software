@@ -1,0 +1,185 @@
+{
+  "name": "Request Workflow Alignment",
+  "description": "Ensures request processing workflows comply with the defined requirements",
+  "rules": [
+    {
+      "id": "RWA-001",
+      "name": "Request State Machine Implementation",
+      "description": "Request processing must implement the exact state machine defined in requirements",
+      "severity": "critical",
+      "selector": ["*.py"],
+      "pattern": {
+        "type": "semantic",
+        "query": "class that processes requests but does not implement state transitions as defined in requirements"
+      },
+      "message": "Request processing must follow the state machine defined in requirements. Implement all required states and transitions.",
+      "reference": "24_Network_Communication_Requirements.md:Request_Flow:States"
+    },
+    {
+      "id": "RWA-002",
+      "name": "Request Workflow Processing Order",
+      "description": "Request processing steps must be executed in the exact order specified in requirements",
+      "severity": "critical",
+      "selector": ["*.py"],
+      "pattern": {
+        "type": "semantic",
+        "query": "method that processes requests in a different order than specified in requirements"
+      },
+      "message": "Request processing must follow the exact order of steps defined in requirements.",
+      "reference": "24_Network_Communication_Requirements.md:Request_Flow:Workflow"
+    },
+    {
+      "id": "RWA-003",
+      "name": "Request Timeout Configuration",
+      "description": "Request processing must implement timeout configurations as specified in requirements",
+      "severity": "high",
+      "selector": ["*.py"],
+      "pattern": {
+        "type": "semantic",
+        "query": "method that makes network requests without proper timeout configuration"
+      },
+      "message": "All requests must implement timeout configurations as specified in requirements.",
+      "reference": "24_Network_Communication_Requirements.md:Request_Timeouts"
+    },
+    {
+      "id": "RWA-004",
+      "name": "Request Retry Policy",
+      "description": "Request processing must implement retry policies as specified in requirements",
+      "severity": "high",
+      "selector": ["*.py"],
+      "pattern": {
+        "type": "semantic",
+        "query": "method that makes network requests without proper retry policy"
+      },
+      "message": "All requests must implement retry policies with backoff as specified in requirements.",
+      "reference": "24_Network_Communication_Requirements.md:Request_Flow:RetryConditions"
+    },
+    {
+      "id": "RWA-005",
+      "name": "Request Exception Handling",
+      "description": "Request processing must implement exception handling as specified in requirements",
+      "severity": "high",
+      "selector": ["*.py"],
+      "pattern": {
+        "type": "semantic",
+        "query": "method that makes network requests without proper exception handling"
+      },
+      "message": "All requests must implement exception handling as specified in requirements.",
+      "reference": "24_Network_Communication_Requirements.md:Request_Flow:FailureHandling"
+    },
+    {
+      "id": "RWA-006",
+      "name": "Request Validation Sequence",
+      "description": "Request validation must follow the exact sequence specified in requirements",
+      "severity": "high",
+      "selector": ["*.py"],
+      "pattern": {
+        "type": "semantic",
+        "query": "method that validates requests in a different order than specified in requirements"
+      },
+      "message": "Request validation must follow the exact sequence of validation steps defined in requirements.",
+      "reference": "7_Security_Requirements.md:Payment_Processing:ValidationSequence"
+    },
+    {
+      "id": "RWA-007",
+      "name": "Request Circuit Breaker Implementation",
+      "description": "External service requests must implement circuit breaker patterns as specified in requirements",
+      "severity": "high",
+      "selector": ["*.py"],
+      "pattern": {
+        "type": "semantic",
+        "query": "method that makes external service requests without circuit breaker pattern"
+      },
+      "message": "External service requests must implement circuit breaker patterns as specified in requirements.",
+      "reference": "24_Network_Communication_Requirements.md:External_Services:CircuitBreaker"
+    },
+    {
+      "id": "RWA-008",
+      "name": "Request Rate Limiting Implementation",
+      "description": "Request processing must implement rate limiting as specified in requirements",
+      "severity": "high",
+      "selector": ["*.py"],
+      "pattern": {
+        "type": "semantic",
+        "query": "method that processes requests without rate limiting"
+      },
+      "message": "Request processing must implement rate limiting as specified in requirements.",
+      "reference": "24_Network_Communication_Requirements.md:Request_Flow:RateLimiting"
+    },
+    {
+      "id": "RWA-009",
+      "name": "Request Logging Requirements",
+      "description": "Request processing must implement logging as specified in requirements",
+      "severity": "medium",
+      "selector": ["*.py"],
+      "pattern": {
+        "type": "semantic",
+        "query": "method that processes requests without proper logging"
+      },
+      "message": "Request processing must implement logging for all state transitions, errors, and important events as specified in requirements.",
+      "reference": "10_Operational_Requirements.md:Logging"
+    },
+    {
+      "id": "RWA-010",
+      "name": "Request Security Headers",
+      "description": "Requests must include security headers as specified in requirements",
+      "severity": "high",
+      "selector": ["*.py"],
+      "pattern": {
+        "type": "semantic",
+        "query": "method that makes HTTP requests without required security headers"
+      },
+      "message": "All HTTP requests must include security headers as specified in requirements.",
+      "reference": "7_Security_Requirements.md:API_Security:RequestHeaders"
+    },
+    {
+      "id": "RWA-011",
+      "name": "Request Response Format",
+      "description": "Request responses must follow the format specified in requirements",
+      "severity": "medium",
+      "selector": ["*.py"],
+      "pattern": {
+        "type": "semantic",
+        "query": "method that returns response in a different format than specified in requirements"
+      },
+      "message": "All request responses must follow the format specified in requirements.",
+      "reference": "3_Technical_Requirements.md:API_Design:Responses"
+    },
+    {
+      "id": "RWA-012",
+      "name": "Request Performance Metrics",
+      "description": "Request processing must track performance metrics as specified in requirements",
+      "severity": "medium",
+      "selector": ["*.py"],
+      "pattern": {
+        "type": "semantic",
+        "query": "method that processes requests without tracking performance metrics"
+      },
+      "message": "Request processing must track performance metrics as specified in requirements.",
+      "reference": "10_Operational_Requirements.md:Performance_Monitoring"
+    }
+  ],
+  "configs": [
+    {
+      "id": "request-workflow-config",
+      "name": "Request Workflow Configuration",
+      "description": "Configuration for request workflow alignment",
+      "options": {
+        "max_retry_attempts": 3,
+        "default_timeout_ms": 5000,
+        "circuit_breaker_threshold": 5,
+        "circuit_breaker_recovery_timeout": 60,
+        "validate_state_transitions": true,
+        "validate_processing_order": true,
+        "validate_exception_handling": true,
+        "validate_retry_policy": true,
+        "validate_circuit_breaker": true,
+        "validate_rate_limiting": true,
+        "validate_logging": true,
+        "validate_security_headers": true,
+        "validate_response_format": true,
+        "validate_performance_metrics": true
+      }
+    }
+  ]
+} 

@@ -1,0 +1,83 @@
+{
+  "name": "Productivity Software Development Rules",
+  "description": "Comprehensive development standards for the Productivity Software project",
+  "version": "1.0.0",
+  "rules": [
+    {
+      "name": "Code Organization",
+      "path": "rules/code_organization.json",
+      "enabled": true
+    },
+    {
+      "name": "Development Workflow",
+      "path": "rules/development_workflow.json",
+      "enabled": true
+    },
+    {
+      "name": "Coding Standards",
+      "path": "rules/coding_standards.json",
+      "enabled": true
+    },
+    {
+      "name": "Testing Standards",
+      "path": "rules/testing_standards.json",
+      "enabled": true
+    },
+    {
+      "name": "Test-Driven Development",
+      "path": "rules/tdd_rules.json",
+      "enabled": true
+    },
+    {
+      "name": "IDE Workflows",
+      "path": "rules/ide_workflows.json",
+      "enabled": true
+    },
+    {
+      "name": "Requirements Traceability",
+      "path": "rules/requirements_traceability.json",
+      "enabled": true
+    },
+    {
+      "name": "Request Requirements Alignment",
+      "path": "rules/request_requirements_alignment.json",
+      "enabled": true
+    },
+    {
+      "name": "Request Workflow Alignment",
+      "path": "rules/request_workflow_alignment.json",
+      "enabled": true
+    },
+    {
+      "name": "Code Requirements Alignment",
+      "path": "rules/code_requirements_alignment.json",
+      "enabled": true
+    },
+    {
+      "name": "Documentation Standards",
+      "path": "rules/documentation_standards.json",
+      "enabled": true
+    },
+    {
+      "name": "Performance Optimization",
+      "path": "rules/performance_optimization.json",
+      "enabled": true
+    },
+    {
+      "name": "Accessibility & Security",
+      "path": "rules/accessibility_security.json",
+      "enabled": true
+    },
+    {
+      "name": "Cursor-Specific Features",
+      "path": "rules/cursor_specific.json",
+      "enabled": true
+    }
+  ],
+  "settings": {
+    "defaultSeverity": "warning",
+    "enableInlineDisable": true,
+    "disablePrefix": "cursor-disable",
+    "reportInvalidInlineDisable": true
+  }
+} 

@@ -1,0 +1,55 @@
+{
+  "name": "Documentation Standards",
+  "description": "Rules for code documentation, project documentation, and comment quality",
+  "rules": [
+    {
+      "id": "code-documentation",
+      "name": "Code Documentation",
+      "description": "Standards for documenting code",
+      "guidelines": [
+        "Document all public functions and classes",
+        "Use JSDoc for JavaScript/TypeScript",
+        "Use docstrings for Python",
+        "Update documentation when changing code"
+      ],
+      "severity": "warning",
+      "configuration": {
+        "requireJSDoc": true,
+        "requirePythonDocstrings": true,
+        "updateWithChanges": true
+      }
+    },
+    {
+      "id": "project-documentation",
+      "name": "Project Documentation",
+      "description": "Standards for project-level documentation",
+      "guidelines": [
+        "Maintain up-to-date README files for all major components",
+        "Document architectural decisions in ADRs",
+        "Keep API documentation synchronized with implementation",
+        "Use diagrams for visualizing complex systems"
+      ],
+      "severity": "warning",
+      "configuration": {
+        "requiredFiles": ["README.md", "docs/architecture"],
+        "apiDocSynchronization": true
+      }
+    },
+    {
+      "id": "comment-quality",
+      "name": "Comment Quality",
+      "description": "Standards for code comments",
+      "guidelines": [
+        "Focus comments on why, not what",
+        "Update comments when changing the related code",
+        "Remove redundant comments",
+        "Use TODO comments with issue references for future work"
+      ],
+      "severity": "info",
+      "configuration": {
+        "todoPattern": "TODO: #\\d+",
+        "updateWithChanges": true
+      }
+    }
+  ]
+} 

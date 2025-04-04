@@ -1,0 +1,60 @@
+{
+  "name": "Coding Standards",
+  "description": "Rules for Python, JavaScript/TypeScript, and general code quality",
+  "rules": [
+    {
+      "id": "python-standards",
+      "name": "Python Standards",
+      "description": "Standards for Python code",
+      "guidelines": [
+        "Follow PEP 8 style guidelines",
+        "Use Type hints for all function parameters and return values",
+        "Document all functions with docstrings",
+        "Use Django's Class-Based Views for all view implementations",
+        "Implement custom mixins for reusable functionality"
+      ],
+      "severity": "error",
+      "configuration": {
+        "typeHints": true,
+        "docstrings": true,
+        "djangoCBV": true
+      }
+    },
+    {
+      "id": "javascript-typescript-standards",
+      "name": "JavaScript/TypeScript Standards",
+      "description": "Standards for JavaScript and TypeScript code",
+      "guidelines": [
+        "Use TypeScript for all new frontend code",
+        "Follow Airbnb JavaScript Style Guide",
+        "Use ESLint with recommended settings",
+        "Prefer functional components with hooks over class components",
+        "Use TypeScript interfaces for prop types and data models"
+      ],
+      "severity": "error",
+      "configuration": {
+        "useTypeScript": true,
+        "preferFunctionalComponents": true,
+        "eslintConfig": "airbnb"
+      }
+    },
+    {
+      "id": "code-quality",
+      "name": "Code Quality Standards",
+      "description": "General code quality standards",
+      "guidelines": [
+        "Maintain maximum cyclomatic complexity of 15 per function",
+        "Keep functions under 50 lines of code",
+        "Use meaningful variable and function names",
+        "Include comments for complex logic",
+        "Remove unused code instead of commenting it out"
+      ],
+      "severity": "warning",
+      "configuration": {
+        "maxComplexity": 15,
+        "maxFunctionLines": 50,
+        "noDeadCode": true
+      }
+    }
+  ]
+} 

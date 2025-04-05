@@ -207,6 +207,25 @@ These rules aim to maintain high quality and consistency in our codebase by:
 13. **Accessibility & Security** - Standards for accessibility and security
 14. **Cursor-Specific Features** - Specialized rules for Cursor IDE features
 
+### Test-Driven Development Rules
+
+The Test-Driven Development (TDD) rules ensure that proper test-driven practices are followed in our development process. These rules enforce:
+
+- **Test Coverage**: Ensuring new code has corresponding test files with adequate coverage
+- **Test-First Approach**: Writing tests before implementation (Red-Green-Refactor cycle)
+- **Test Structure**: Proper naming and organization of test files, classes, and methods
+- **Test Independence**: Ensuring tests don't rely on each other's state
+- **Test Requirements Traceability**: Linking tests back to requirements documentation
+- **Mocking Dependencies**: Proper isolation of the system under test
+- **Performance Testing**: Validating response times for critical functionality
+
+To use these rules effectively:
+1. Write your tests first for any new feature or functionality
+2. Ensure tests properly reference the requirements they validate
+3. Follow proper naming conventions for test classes and methods
+4. Categorize tests appropriately as unit or integration tests
+5. Maintain a minimum of 80% code coverage for new features
+
 ### Request Workflow Alignment
 
 The Request Workflow Alignment rules ensure that request processing flows adhere to the sequences, state transitions, and processing rules defined in the formal requirements.

@@ -1,0 +1,53 @@
+# Code Organization Standards
+
+_Rules for organizing project structure, files, imports, and components_
+
+## Project Structure
+
+**ID**: project-structure  
+**Severity**: error  
+
+Follow consistent project structure patterns
+
+- Follow the Django project structure for backend code
+- Organize frontend Next.js code using the App Router structure
+- Keep shared utilities in dedicated folders by functionality
+- Maintain consistent naming conventions across the codebase
+
+## File Naming Conventions
+
+**ID**: file-naming  
+**Severity**: warning  
+
+Use consistent file naming patterns
+
+- Use snake_case for Python files
+- Use PascalCase for React components
+- Use camelCase for JavaScript/TypeScript utility files
+- Include type information in TypeScript filenames where appropriate (e.g., `UserTypes.ts`)
+
+## Import Order
+
+**ID**: import-order  
+**Severity**: warning  
+
+Organize imports in a consistent manner
+
+- Standard library imports first
+- Third-party library imports second
+- Local application imports third
+- Separate import groups with a blank line
+- Sort imports alphabetically within each group
+
+## Component Organization
+
+**ID**: component-organization  
+**Severity**: warning  
+
+Structure React components consistently
+
+- Organize React components using atomic design principles
+- Keep component files under 300 lines of code
+- Extract complex logic into custom hooks
+- Co-locate component tests with component files
+

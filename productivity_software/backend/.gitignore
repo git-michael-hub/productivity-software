@@ -1,3 +1,8 @@
+# This folder uses the root gitignore
+
+# Also check main .gitignore file in the project root
+# Additional backend-specific rules can be added here if needed
+
 # Python bytecode
 __pycache__/
 *.py[cod]

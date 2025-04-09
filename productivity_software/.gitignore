@@ -1,4 +1,4 @@
-# Python
+# Python/Django Backend
 __pycache__/
 *.py[cod]
 *$py.class
@@ -16,51 +16,142 @@ lib64/
 parts/
 sdist/
 var/
+wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-.coverage
-htmlcov/
-.pytest_cache/
+MANIFEST
 
-# Django
+# Django specific
 *.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
-media
+media/
+staticfiles/
 static/
+collected_static/
 
-# React
-/frontend/node_modules
+# Frontend/Next.js
+/frontend/node_modules/
 /frontend/.pnp
 /frontend/.pnp.js
-/frontend/coverage
-/frontend/build
-/frontend/.DS_Store
-/frontend/.env.local
-/frontend/.env.development.local
-/frontend/.env.test.local
-/frontend/.env.production.local
-/frontend/npm-debug.log*
-/frontend/yarn-debug.log*
-/frontend/yarn-error.log*
+/frontend/yarn.lock
+/frontend/package-lock.json
+/frontend/.next/
+/frontend/out/
+/frontend/.swc/
+/frontend/build/
+/frontend/dist/
+/frontend/coverage/
+/frontend/storybook-static/
+/frontend/.vercel/
+/frontend/cypress/screenshots/
+/frontend/cypress/videos/
+/frontend/.nyc_output/
+/frontend/public/sw.js
+/frontend/public/workbox-*.js
+/frontend/public/worker-*.js
+/frontend/public/sw.js.map
+/frontend/public/workbox-*.js.map
+/frontend/public/worker-*.js.map
 
-# Environment
+# Testing & Coverage
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.tox/
+coverage.xml
+*.cover
+.hypothesis/
+nosetests.xml
+.nose-report/
+
+# Environment Variables
 .env
 .env.local
+.env.development
 .env.development.local
+.env.test
 .env.test.local
+.env.production
 .env.production.local
+.env*.local
+.envrc
 .venv
 venv/
 ENV/
-.vscode/
+env.bak/
+venv.bak/
+.python-version
+
+# Editor & IDE files
 .idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+*.launch
+.settings/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.pydevproject
+.spyderproject
+.spyproject
+*.swp
+*~
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Temporary files
+.tmp/
+.temp/
+.cache/
+tsconfig.tsbuildinfo
+*.backup
+*.bak
+*.old
+*.tmp
+.local/
+backups/
+data/
 
 # Docker
 .dockerignore
 
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
 # OS specific
 .DS_Store
-Thumbs.db 
+Thumbs.db
+.directory
+*.lnk
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Redis
+dump.rdb
+
+# Secret & Certificate files
+*.pem
+*.key
+*.crt
+*.p12
+
+# Elastic Beanstalk
+.elasticbeanstalk/
+.ebextensions/ 

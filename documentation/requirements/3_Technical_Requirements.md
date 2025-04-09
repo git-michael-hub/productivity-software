@@ -8,22 +8,30 @@ Technical requirements focus on the **architecture**, **infrastructure**, and **
 - **Framework**: 
   - Next.js (v14.0.0+) for React-based application framework
   - React (v18.2.0+) for component-based UI
+- **Language**:
+  - TypeScript (v5.0.0+) is required for all frontend code
+  - No plain JavaScript (.js/.jsx) files are permitted
+  - Strict TypeScript configuration with all strict type checking options enabled
 - **Rendering Strategies**:
   - Server-Side Rendering (SSR) for improved SEO and initial load performance
   - Static Site Generation (SSG) for static content
   - Client-side rendering for dynamic interactive elements
-- **State Management**: Redux (v4.2.1+) with Redux Toolkit (v1.9.5+)
-- **UI Components**: Material UI (v5.14.0+) component library
-- **Styling**: Styled Components (v6.0.7+) for styling
+- **State Management**: Redux (v4.2.1+) with Redux Toolkit (v1.9.5+) and typed hooks
+- **UI Components**: Material UI (v5.14.0+) component library with TypeScript support
+- **Styling**: Styled Components (v6.0.7+) for styling with TypeScript props
 - **Build Tools**: 
-  - Next.js built-in build system
+  - Next.js built-in build system with TypeScript compiler
   - Webpack (v5.88.0+) for bundling
 - **Package Manager**: pnpm (v8.6.0+) for efficient dependency management
 - **Routing**: Next.js built-in file-based routing system
 - **Testing**: 
-  - Jest (v29.6.0+) for unit testing
-  - React Testing Library (v14.0.0+) for component testing
-  - Cypress (v12.17.0+) for end-to-end testing
+  - Jest (v29.6.0+) with ts-jest for TypeScript testing
+  - React Testing Library (v14.0.0+) for component testing with TypeScript support
+  - Cypress (v12.17.0+) for end-to-end testing with TypeScript
+- **Linting & Formatting**:
+  - ESLint with TypeScript-specific rules
+  - Prettier with TypeScript support
+  - TypeScript-specific code quality plugins
 
 ### Backend
 - **Framework**: Django Web Framework (v4.2.7+, LTS version)

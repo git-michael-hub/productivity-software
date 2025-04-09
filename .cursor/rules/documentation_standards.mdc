@@ -1,3 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
 # Documentation Standards
 
 _Rules for code documentation, project documentation, and comment quality_

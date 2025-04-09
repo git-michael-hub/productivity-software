@@ -1,3 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
 # Accessibility & Security
 
 _Rules for ensuring accessibility standards and security best practices_

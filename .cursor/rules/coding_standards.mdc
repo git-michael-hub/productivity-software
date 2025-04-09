@@ -1,3 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
 # Coding Standards
 
 _Rules for Python, JavaScript/TypeScript, and general code quality_
@@ -22,11 +27,15 @@ Standards for Python code
 
 Standards for JavaScript and TypeScript code
 
-- Use TypeScript for all new frontend code
-- Follow Airbnb JavaScript Style Guide
-- Use ESLint with recommended settings
+- TypeScript is required for all JavaScript code (no plain JavaScript files allowed)
+- All React components must be written in TypeScript (.tsx files)
+- All utility functions and modules must be TypeScript (.ts files)
+- Follow Airbnb TypeScript Style Guide
+- Use ESLint with strict TypeScript rules
+- Use TypeScript interfaces or types for all props, state, and data models
+- Enforce strict null checks and strict function types
 - Prefer functional components with hooks over class components
-- Use TypeScript interfaces for prop types and data models
+- Avoid using 'any' type; use proper type definitions instead
 
 ## Code Quality Standards
 

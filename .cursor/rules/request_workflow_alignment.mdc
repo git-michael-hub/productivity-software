@@ -1,3 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
 # Request Workflow Alignment
 
 _Ensures request processing workflows comply with the defined requirements_

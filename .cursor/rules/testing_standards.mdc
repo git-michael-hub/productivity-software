@@ -1,3 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
 # Testing Standards
 
 _Rules for test coverage, organization, and workflow_

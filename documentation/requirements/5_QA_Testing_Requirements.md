@@ -55,16 +55,19 @@ Quality Assurance requirements ensure the software **works as expected** under d
   - Code cannot be merged without passing unit tests
 
 - **Frameworks & Tools**
-  - Jest for JavaScript/TypeScript
-  - JUnit for Java components
+  - Jest for TypeScript testing (required for all frontend code)
+  - TypeScript-specific testing utilities like ts-jest must be configured
+  - Type checking must be enabled in test files
+  - React Testing Library for component testing with proper TypeScript typings
   - pytest for Python services
-  - xUnit for .NET components
+  - Test files must use .ts or .tsx extensions to ensure type safety
 
 - **Best Practices**
   - Tests should be independent and repeatable
   - Mock external dependencies
   - Clear test naming conventions
   - Arrange-Act-Assert pattern
+  - Use proper TypeScript types for test data and mocks
 
 ### Integration Testing
 

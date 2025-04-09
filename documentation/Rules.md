@@ -4,20 +4,23 @@
 
 1. **Project Structure**
    - Follow the Django project structure for backend code
-   - Organize frontend Next.js code using the App Router structure
+   - Organize frontend React code into features, components, hooks, and utilities
+   - Group TypeScript files by feature and functionality
    - Keep shared utilities in dedicated folders by functionality
    - Maintain consistent naming conventions across the codebase
 
 2. **File Naming**
    - Use snake_case for Python files
-   - Use PascalCase for React components
-   - Use camelCase for JavaScript/TypeScript utility files
-   - Include type information in TypeScript filenames where appropriate (e.g., `UserTypes.ts`)
+   - Use PascalCase for React components with `.tsx` extension
+   - Use camelCase for TypeScript utility files with `.ts` extension
+   - Use PascalCase for TypeScript interfaces and types with `.ts` extension (e.g., `UserTypes.ts`)
+   - No `.js` or `.jsx` files allowed; all JavaScript code must use TypeScript extensions
 
 3. **Import Order**
    - Standard library imports first
    - Third-party library imports second
    - Local application imports third
+   - Type imports should be grouped with their related functionality
    - Separate import groups with a blank line
    - Sort imports alphabetically within each group
 
@@ -26,6 +29,8 @@
    - Keep component files under 300 lines of code
    - Extract complex logic into custom hooks
    - Co-locate component tests with component files
+   - Define prop interfaces at the top of component files
+   - Export types and interfaces needed by other components
 
 ## Development Workflow
 
@@ -58,11 +63,15 @@
    - Implement custom mixins for reusable functionality
 
 2. **JavaScript/TypeScript Standards**
-   - Use TypeScript for all new frontend code
-   - Follow Airbnb JavaScript Style Guide
-   - Use ESLint with recommended settings
+   - TypeScript is required for all JavaScript code (no plain JavaScript files allowed)
+   - All React components must be written in TypeScript (.tsx files)
+   - All utility functions and modules must be TypeScript (.ts files)
+   - Follow Airbnb TypeScript Style Guide
+   - Use ESLint with strict TypeScript rules
+   - Use TypeScript interfaces or types for all props, state, and data models
+   - Enforce strict null checks and strict function types
    - Prefer functional components with hooks over class components
-   - Use TypeScript interfaces for prop types and data models
+   - Avoid using 'any' type; use proper type definitions instead
 
 3. **Code Quality**
    - Maintain maximum cyclomatic complexity of 15 per function
@@ -95,7 +104,7 @@
 
 1. **Code Documentation**
    - Document all public functions and classes
-   - Use JSDoc for JavaScript/TypeScript
+   - Use TSDoc for TypeScript code documentation
    - Use docstrings for Python
    - Update documentation when changing code
 

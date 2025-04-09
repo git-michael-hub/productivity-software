@@ -1,3 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
 # Performance Optimization
 
 _Rules for query optimization, frontend performance, and resource management_

@@ -1,3 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
 # IDE Workflows
 
 _Rules for standardized IDE workflows in Cursor, especially for test-driven development_

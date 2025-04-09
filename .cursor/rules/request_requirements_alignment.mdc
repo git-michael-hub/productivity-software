@@ -1,3 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
 # Request Requirements Alignment
 
 _Rules to ensure API endpoints and request handlers align with formal requirements documentation_

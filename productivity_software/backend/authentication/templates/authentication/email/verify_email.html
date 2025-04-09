@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Verify your email address</title>
+</head>
+<body>
+    <h2>Welcome to Productivity Software!</h2>
+    <p>Hi {{ user.first_name }},</p>
+    <p>Thank you for registering with Productivity Software. Please verify your email address by clicking the link below:</p>
+    <p>
+        <a href="{{ verification_url }}" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">
+            Verify Email Address
+        </a>
+    </p>
+    <p>If you did not create an account, you can safely ignore this email.</p>
+    <p>Best regards,<br>The Productivity Software Team</p>
+</body>
+</html> 
